@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import morgan from "morgan";
 import { notFound, errorHandler } from "./middlewares/errorMiddleware";
 import peopleRoute from "./routes/people/peopleRoute";
 import flimsRoute from "./routes/flims/filmsRoute";
@@ -8,6 +9,11 @@ import starshipsRoute from "./routes/starships/starShipsRoute";
 dotenv.config();
 
 const app = express();
+
+if (process.env.NODE_ENV === "development") {
+  app.use(morgan("dev"));
+}
+
 const PORT = Number(process.env.PORT) || 5000;
 
 app.use(express.json());
