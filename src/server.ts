@@ -1,8 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
 import { notFound, errorHandler } from "./middlewares/errorMiddleware";
-import getAllPeopleRoute from "./routes/people/getAllPeopleRoute";
-import getFlimsRoute from "./routes/flims/getFilmsRoute";
+import getAllPeopleRoute from "./routes/people/peopleRoute";
+import getFlimsRoute from "./routes/flims/filmsRoute";
 
 dotenv.config();
 
