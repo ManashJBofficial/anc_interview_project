@@ -19,7 +19,7 @@ export const cacheMiddleware = async (
   if (cachedData) {
     const data = JSON.parse(cachedData);
     console.log("Data retrieved from cache");
-    return res.json({ data, info: "Data retrieved from cache" });
+    return res.json(data);
   }
 
   next();
