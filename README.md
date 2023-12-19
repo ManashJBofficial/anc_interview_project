@@ -153,16 +153,6 @@ This API serves as a gateway to the Star Wars API (SWAPI), providing cached resp
 
 ## 🚀 Getting Started
 
-***Dependencies***
-
-Please ensure you have the following dependencies installed on your system:
-
-`- ℹ️ Dependency 1`
-
-`- ℹ️ Dependency 2`
-
-`- ℹ️ ...`
-
 ### 🔧 Installation
 
 1. Clone the anc_interview_project repository:
