@@ -4,7 +4,6 @@ import { Request, Response } from "express";
 import axios from "axios";
 import asyncHandler from "express-async-handler";
 import { connect } from "../../middlewares/redisClient";
-import { getBirthYear } from "../../utils/index";
 import dotenv from "dotenv";
 
 dotenv.config();
