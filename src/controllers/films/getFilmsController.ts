@@ -58,12 +58,12 @@ const getFlims = asyncHandler(
 );
 
 const sortFlims = (
-  people: Films[],
+  films: Films[],
   sortBy: keyof Films,
   sortOrder: "asc" | "desc"
 ) => {
   if (sortBy === "title") {
-    return people.sort((a, b) => {
+    return films.sort((a, b) => {
       const nameA = a.title.toLowerCase();
       const nameB = b.title.toLowerCase();
       return sortOrder === "asc"
@@ -71,23 +71,23 @@ const sortFlims = (
         : nameB.localeCompare(nameA);
     });
   } else if (sortBy === "episode_id") {
-    return people.sort((a, b) => {
-      const heightA = a.episode_id;
-      const heightB = b.episode_id;
+    return films.sort((a, b) => {
+      const episodeA = a.episode_id;
+      const episodeB = b.episode_id;
 
-      if (heightA === "unknown") {
+      if (episodeA === "unknown") {
         return 1;
       }
-      if (heightB === "unknown") {
+      if (episodeB === "unknown") {
         return -1;
       }
 
-      const numHeightA = parseInt(heightA);
-      const numHeightB = parseInt(heightB);
+      const numEpisodeA = parseInt(episodeA);
+      const numEpisodeB = parseInt(episodeB);
 
       return sortOrder === "asc"
-        ? numHeightA - numHeightB
-        : numHeightB - numHeightA;
+        ? numEpisodeA - numEpisodeB
+        : numEpisodeB - numEpisodeA;
     });
   }
 };
