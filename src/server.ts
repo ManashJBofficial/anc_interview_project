@@ -1,7 +1,9 @@
 import express from "express";
 import dotenv from "dotenv";
 import { notFound, errorHandler } from "./middlewares/errorMiddleware";
-import getAllPeopleRoute from "./routes/people/getAllPeopleRoute";
+import peopleRoute from "./routes/people/peopleRoute";
+import flimsRoute from "./routes/flims/filmsRoute";
+import starshipsRoute from "./routes/starships/starShipsRoute";
 
 dotenv.config();
 
@@ -20,7 +22,9 @@ app.get("/api", (_req: express.Request, res: express.Response) => {
   });
 });
 
-app.use("/api/people", getAllPeopleRoute);
+app.use("/api/people", peopleRoute);
+app.use("/api/films", flimsRoute);
+app.use("/api/starships", starshipsRoute);
 
 app.use(notFound);
 app.use(errorHandler);
