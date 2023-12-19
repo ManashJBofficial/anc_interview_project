@@ -29,11 +29,12 @@ interface RequestQuery {
   page?: string;
   sortBy?: keyof People;
   sortOrder?: "asc" | "desc";
+  search?: string;
 }
 
 const getAllPeople = asyncHandler(
   async (req: Request<{}, {}, {}, RequestQuery>, res: Response) => {
-    const { page, sortBy, sortOrder } = req.query;
+    const { page, sortBy, sortOrder, search } = req.query;
 
     const key = req.originalUrl;
 
@@ -45,6 +46,12 @@ const getAllPeople = asyncHandler(
 
     if (sortBy && sortOrder) {
       data.results = sortPeople(data.results, sortBy, sortOrder);
+    }
+
+    if (search) {
+      data.results = data.results.filter((person) =>
+        person.name.toLowerCase().includes(search.toLowerCase())
+      );
     }
 
     // Cache and respond

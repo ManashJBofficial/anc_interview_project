@@ -27,11 +27,12 @@ interface RequestQuery {
   page?: string;
   sortBy?: keyof Films;
   sortOrder?: "asc" | "desc";
+  search?: string;
 }
 
 const getFlims = asyncHandler(
   async (req: Request<{}, {}, {}, RequestQuery>, res: Response) => {
-    const { page, sortBy, sortOrder } = req.query;
+    const { page, sortBy, sortOrder, search } = req.query;
     const key = req.originalUrl;
 
     const response = await axios.get<ApiResponse>(`${SWAPI_BASE_URL}/films`, {
@@ -45,6 +46,12 @@ const getFlims = asyncHandler(
       if (sorted) {
         data.results = sorted;
       }
+    }
+
+    if (search) {
+      data.results = data.results.filter((film) =>
+        film.title.toLowerCase().includes(search.toLowerCase())
+      );
     }
 
     // Cache and respond
