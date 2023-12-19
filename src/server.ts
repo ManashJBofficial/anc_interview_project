@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import { notFound, errorHandler } from "./middlewares/errorMiddleware";
 import getAllPeopleRoute from "./routes/people/getAllPeopleRoute";
+import getFlimsRoute from "./routes/flims/getFilmsRoute";
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ app.get("/api", (_req: express.Request, res: express.Response) => {
 });
 
 app.use("/api/people", getAllPeopleRoute);
+app.use("/api/films", getFlimsRoute);
 
 app.use(notFound);
 app.use(errorHandler);
