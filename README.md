@@ -79,40 +79,34 @@ This API serves as a gateway to the Star Wars API (SWAPI), providing cached resp
 ```
 
 ---
-## 🛣 Api Endpoints
+## 🛣 API Endpoints
 
-- Base URL: https://swapi.manash.dev
-- People API: 
-    - GET all people: https://swapi.manash.dev/api/people
-    - GET people by Id: https://swapi.manash.dev/api/people/1
-    - GET people by page number: https://swapi.manash.dev/api/people/?page=3
-    - GET search people by attributes: 
-        - Valid attributes: "name"
-        - Example: https://swapi.manash.dev/api/people/?search=Luke
-    - GET sort & order people by attributes:
-        - Valid attributes: "name", "height", "birth_year", "mass"
-        - Example: https://swapi.manash.dev/api/people/?sortBy=mass&sortOrder=desc
-- Films API: 
-    - GET all films: https://swapi.manash.dev/api/films
-    - GET films by Id: https://swapi.manash.dev/api/films/1
-    - GET films by page number: https://swapi.manash.dev/api/films/?page=3
-    - GET search films by attributes: 
-        - Valid attributes: "title"
-        - Example: https://swapi.manash.dev/api/films/?search=hope
-    - GET sort & order films by attributes:
-        - Valid attributes: "title", "episode_id"
-        - Example: https://swapi.manash.dev/api/films/?sortBy=episode_id&sortOrder=asc
+ :house: Base URL: https://swapi.manash.dev
 
-- Starships API: 
-    - GET all starships: https://swapi.manash.dev/api/starships
-    - GET starships by Id: https://swapi.manash.dev/api/starships/9
-    - GET starships by page number: https://swapi.manash.dev/api/starships/?page=3
-    - GET search starships by attributes: 
-        - Valid attributes: "name", "model"
-        - Example: https://swapi.manash.dev/api/starships/?search=Imperial
-    - GET sort & order starships by attributes:
-        - Valid attributes: "name", "crew", "model"
-        - Example: https://swapi.manash.dev/api/starships/?sortBy=name&sortOrder=desc
+### 👤 People
+
+- GET all people: https://swapi.manash.dev/api/people
+- GET person by ID: https://swapi.manash.dev/api/people/1  
+- GET people by page: https://swapi.manash.dev/api/people/?page=3
+- SEARCH people: https://swapi.manash.dev/api/people/?search=Luke  
+- SORT & ORDER people: https://swapi.manash.dev/api/people/?sortBy=mass&sortOrder=desc
+
+### 🎥 Films 
+
+- GET all films: https://swapi.manash.dev/api/films
+- GET film by ID: https://swapi.manash.dev/api/films/1
+- GET films by page: https://swapi.manash.dev/api/films/?page=3 
+- SEARCH films: https://swapi.manash.dev/api/films/?search=hope
+- SORT & ORDER films: https://swapi.manash.dev/api/films/?sortBy=episode_id&sortOrder=asc
+
+### 🚀 Starships
+
+- GET all starships: https://swapi.manash.dev/api/starships
+- GET starship by ID: https://swapi.manash.dev/api/starships/9
+- GET starships by page: https://swapi.manash.dev/api/starships/?page=3
+- SEARCH starships: https://swapi.manash.dev/api/starships/?search=Imperial
+- SORT & ORDER starships: https://swapi.manash.dev/api/starships/?sortBy=name&sortOrder=desc
+
 
 ---
 
