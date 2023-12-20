@@ -27,15 +27,12 @@
 - [📍 Overview](#-overview)
 - [📦 Features](#-features)
 - [📂 repository Structure](#-repository-structure)
+- [🛣 Api Endpoints](#-api-endpoints)
 - [⚙️ Modules](#modules)
 - [🚀 Getting Started](#-getting-started)
     - [🔧 Installation](#-installation)
     - [🤖 Running anc_interview_project](#-running-anc_interview_project)
-    - [🧪 Tests](#-tests)
-- [🛣 Api Endpoints](#-api-endpoints)
-- [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
-- [👏 Acknowledgments](#-acknowledgments)
 
 ---
 
@@ -199,6 +196,18 @@ cd anc_interview_project
 ```sh
 npm install
 ```
+4. Setup environment variables: 
+
+Create a `.env` file in your root directory-
+
+```sh
+PORT=5000
+SWAPI_BASE_URL=https://swapi.dev/api
+NODE_ENV=development
+REDIS_URL=<your-redis-external-url>
+---
+Note: You can set NODE_ENV to development or production
+```
 
 ### 🤖 Running anc_interview_project
 
@@ -210,10 +219,6 @@ OR
 npm run dev
 ```
 
-### 🧪 Tests
-```sh
-npm test
-```
 ---
 ## 📄 License
 
@@ -221,6 +226,6 @@ This project is protected under the [MIT](https://choosealicense.com/licenses/mi
 
 ---
 
-[**Return**](#Top)
+[**Return**](#Top) ⬆️
 
 ---
