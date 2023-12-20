@@ -32,7 +32,7 @@
     - [🔧 Installation](#-installation)
     - [🤖 Running anc_interview_project](#-running-anc_interview_project)
     - [🧪 Tests](#-tests)
-- [🛣 Roadmap](#-roadmap)
+- [🛣 Api Endpoints](#-api-endpoints)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
 - [👏 Acknowledgments](#-acknowledgments)
@@ -77,6 +77,42 @@ This API serves as a gateway to the Star Wars API (SWAPI), providing cached resp
     └── tsconfig.json
 
 ```
+
+---
+## 🛣 Api Endpoints
+
+- Base URL: https://swapi.manash.dev
+- People API: 
+    - GET all people: https://swapi.manash.dev/api/people
+    - GET people by Id: https://swapi.manash.dev/api/people/1
+    - GET people by page number: https://swapi.manash.dev/api/people/?page=3
+    - GET search people by attributes: 
+        - Valid attributes: "name"
+        - Example: https://swapi.manash.dev/api/people/?search=Luke
+    - GET sort & order people by attributes:
+        - Valid attributes: "name", "height", "birth_year", "mass"
+        - Example: https://swapi.manash.dev/api/people/?sortBy=mass&sortOrder=desc
+- Films API: 
+    - GET all films: https://swapi.manash.dev/api/films
+    - GET films by Id: https://swapi.manash.dev/api/films/1
+    - GET films by page number: https://swapi.manash.dev/api/films/?page=3
+    - GET search films by attributes: 
+        - Valid attributes: "title"
+        - Example: https://swapi.manash.dev/api/films/?search=hope
+    - GET sort & order films by attributes:
+        - Valid attributes: "title", "episode_id"
+        - Example: https://swapi.manash.dev/api/films/?sortBy=episode_id&sortOrder=asc
+
+- Starships API: 
+    - GET all starships: https://swapi.manash.dev/api/starships
+    - GET starships by Id: https://swapi.manash.dev/api/starships/9
+    - GET starships by page number: https://swapi.manash.dev/api/starships/?page=3
+    - GET search starships by attributes: 
+        - Valid attributes: "name", "model"
+        - Example: https://swapi.manash.dev/api/starships/?search=Imperial
+    - GET sort & order starships by attributes:
+        - Valid attributes: "name", "crew", "model"
+        - Example: https://swapi.manash.dev/api/starships/?sortBy=name&sortOrder=desc
 
 ---
 
@@ -184,9 +220,7 @@ npm run dev
 ```sh
 npm test
 ```
-
 ---
-
 ## 📄 License
 
 This project is protected under the [MIT](https://choosealicense.com/licenses/mit/#) License. For more details, refer to the [LICENSE](https://github.com/ManashJBofficial/anc_interview_project/blob/main/LICENSE) file.
