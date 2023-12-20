@@ -21,12 +21,9 @@ app.use(express.json());
 app.use(cors());
 app.get("/api", (_req: express.Request, res: express.Response) => {
   res.status(200).json({
-    films: "https://swapi.dev/api/films/",
-    people: "https://swapi.dev/api/people/",
-    planets: "https://swapi.dev/api/planets/",
-    species: "https://swapi.dev/api/species/",
-    starships: "https://swapi.dev/api/starships/",
-    vehicles: "https://swapi.dev/api/vehicles/",
+    films: "https://swapi.manash.dev/api/films",
+    people: "https://swapi.manash.dev/api/people",
+    starships: "https://swapi.manash.dev/api/starships",
   });
 });
 
